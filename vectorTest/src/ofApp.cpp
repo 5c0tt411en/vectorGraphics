@@ -2,8 +2,9 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetFullscreen(true);
-    ofSetWindowShape(1118, 3000);
+    ofBackground(255);
+    ofSetWindowShape(WIDTH / scale, HEIGHT / scale);
+    ofSetBackgroundAuto(false);
 }
 
 //--------------------------------------------------------------
@@ -17,10 +18,13 @@ void ofApp::draw(){
     s = ofToString(ofGetHours()) + ofToString(ofGetMinutes()) + ".ai";
     if (loop) {
         vg.beginEPS(s);
-        for (int i = 0; i < 100; i++) {
+        
+        /*===========================code===========================*/
+        for (int i = 0; i < 5000; i++) {
             vg.setColor(ofRandom(255), ofRandom(255), ofRandom(255));
-            vg.rect(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()), ofRandom(20), ofRandom(20));
+            vg.rect(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()), ofRandom(5), ofRandom(5));
         }
+        /*===========================code===========================*/
         vg.endEPS();
         loop = false;
     }

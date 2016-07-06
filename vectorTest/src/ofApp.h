@@ -3,6 +3,9 @@
 #include "ofMain.h"
 #include "ofxVectorGraphics.h"
 
+#define WIDTH 1118
+#define HEIGHT 4500
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -24,4 +27,5 @@ class ofApp : public ofBaseApp{
 		
     ofxVectorGraphics vg;
     bool loop;
+    const int scale = 5;
 };
